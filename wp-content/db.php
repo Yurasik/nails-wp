@@ -1,0 +1,1 @@
+/Users/yuriipopov/server/nails-wp/wp-content/plugins/query-monitor/wp-content/db.php
