@@ -23,7 +23,6 @@ $price_button = get_field('price_button');
                     $image = get_sub_field('image');
                     $icon = get_sub_field('icon');
                     $price = get_sub_field('price');
-                    $currency = get_sub_field('currency');
                     ?>
                     <div class="col-md-4 col-sm-12 img-col1">
                         <div class="father">
@@ -35,9 +34,7 @@ $price_button = get_field('price_button');
                                 <div class="circle__flag"></div>
                                 <?php if ($price): ?>
                                     <div class="circle__flag-price-how_much"><?php echo $price; ?></div>
-                                <?php endif; ?>
-                                <?php if ($currency): ?>
-                                    <div class="circle__flag-price-uan"><?php echo $currency; ?></div>
+                                    <div class="circle__flag-price-uan">грн</div>
                                 <?php endif; ?>
                                 <?php if ($title): ?>
                                     <div><p class="main__text__one"><?php echo $title; ?></p></div>

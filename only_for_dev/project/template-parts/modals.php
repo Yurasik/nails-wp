@@ -232,16 +232,14 @@
 
                     <div class="row price">
                         <div class="col-md-10 col-sm-12 manicure"><p>Покрытие ногтей гель-лак френч, лунный.</p>
-                            <p class="red__text">Подготовка ногтевой пластины к нанесению гель-лака и покрытие в стиле
-                                френч </p></div>
+                            <p class="red__text">Подготовка ногтевой пластины к нанесению гель-лака и покрытие в стиле френч </p></div>
                         <div class="col-md-1 col-sm-6 text-right"></div>
                         <div class="col-md-1 col-sm-6 text-left"><p>250 грн</p></div>
                     </div>
 
                     <div class="row price">
                         <div class="col-md-10 col-sm-12 manicure"><p>Снятие гель-лака.</p>
-                            <p class="red__text">Снятие покрытия с ногтевой пластины посредством профессиональной
-                                жидкости</p></div>
+                            <p class="red__text">Снятие покрытия с ногтевой пластины посредством профессиональной жидкости</p></div>
                         <div class="col-md-1 col-sm-6 text-right"></div>
                         <div class="col-md-1 col-sm-6 text-left"><p>50 грн</p></div>
                     </div>

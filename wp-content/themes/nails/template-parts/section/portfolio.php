@@ -1,7 +1,8 @@
 <?php
 $portfolio_title = get_field('portfolio_title');
-$portfolio_button = get_field('portfolio_button');
 $portfolio_gallery = get_field('portfolio_gallery');
+$portfolio_button = get_field('portfolio_button');
+$portfolio_button_url = get_field('portfolio_button_url');
 ?>
 <section>
     <?php if ($portfolio_title): ?>
@@ -33,7 +34,7 @@ $portfolio_gallery = get_field('portfolio_gallery');
     <div id="cont-button">
         <div class="row">
             <div class="col-sm-12" id="btn-main3">
-                <a class="click-me" href="portfolio.php">
+                <a class="click-me" href="<?php echo $portfolio_button_url; ?>">
                     <button class='btn btn-outline-primary button__more-nails'><?php echo $portfolio_button; ?></button>
                 </a>
             </div>

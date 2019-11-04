@@ -9,6 +9,7 @@
  * @package nails
  */
 
+$footer_copyright = get_field('footer_copyright', 'options');
 ?>
 
 </div><!-- container-end -->
@@ -17,9 +18,12 @@
     <div class="container-fluid" id="inst-cont__footer">
         <div class="container text-center">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="malinna__copyright"><p>© Студия ногтевого сервися “Малинна”. 2019. Все права защищены</p></div>
-                </div>
+                <?php if ($footer_copyright): ?>
+                    <div class="col-sm-12">
+                        <div class="malinna__copyright"><p><?php echo $footer_copyright; ?></p></div>
+                    </div>
+                <?php endif; ?>
+
             </div>
         </div>
     </div>

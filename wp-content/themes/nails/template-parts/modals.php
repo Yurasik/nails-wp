@@ -8,7 +8,9 @@
                 </button>
             </div>
             <div class="my__form">
-                <form id="my__form" method="POST" action="//<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>">
+                <?php echo do_shortcode('[contact-form-7 id="20" title="Заказать услугу" html_id="my__form"]'); ?>
+
+                <form id="my__form" method="POST" action="#">
                     <div class="order__service order__main_text"><span>Заказать услугу</span></div>
 
                     <input type="hidden" name="type" value="ajax">
@@ -182,8 +184,14 @@
 <!---------/FORM CALL YOU---------->
 
 <!---------PRICE modal window-------------->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-     aria-hidden="true">
+<?php
+$services_args = [
+    'post_type' => 'services',
+    'posts_per_page' => -1,
+];
+$services = get_posts( $services_args );
+?>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -194,7 +202,6 @@
 
             <div class="my__price">
                 <form id="my__price" method="POST" action="" target="FormName">
-
                     <div class="row price price__row">
                         <div class="offset-sm-1 col-sm-10">
                             <div id="price"><p>Прайс</p>
@@ -202,105 +209,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Маникюр гигиенический, женский.</p>
-                            <p class="red__text">Обрезной маникюр с ванночкой и шлифовкой ногтей</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>120 грн</p></div>
-                    </div>
 
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Маникюр гигиенический, мужской.</p>
-                            <p class="red__text">Обрезной маникюр с ванночкой и шлифовкой ногтей</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>150 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Маникюр европейский.</p>
-                            <p class="red__text">Необрезной маникюр с ванночкой и шлифовкой ногтей</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>80 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Покрытие ногтей (гель-лак).</p>
-                            <p class="red__text">Подготовка ногтевой пластины к нанесению гель-лака и покрытие</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>230 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Покрытие ногтей гель-лак френч, лунный.</p>
-                            <p class="red__text">Подготовка ногтевой пластины к нанесению гель-лака и покрытие в стиле
-                                френч </p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>250 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Снятие гель-лака.</p>
-                            <p class="red__text">Снятие покрытия с ногтевой пластины посредством профессиональной
-                                жидкости</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>50 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Дизайн ногтей (1 ноготь). </p>
-                            <p class="red__text">Дизайн, роспись и декорирование ногтей </p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>5-30 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Ремонт ногтей (1 ноготь).</p>
-                            <p class="red__text">Удаление трещин, надломов и сколов ногтя</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>30 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Наращивание ногтей. </p>
-                            <p class="red__text">Наращивание ногтей на форму (гелевая основа)</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"><p>от</p></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>700 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Снятие нарощенных ногтей.</p>
-                            <p class="red__text">Удаление геля с натуральных ногтей</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"><p>от</p></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>90 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Коррекция нарощенных ногтей.</p>
-                            <p class="red__text">Коррекция нарощенных ногтей (гелевая система)</p></div>
-                        <div class="col-md-1 col-sm-6 text-right"><p>от</p></div>
-                        <div class="col-md-1 col-sm-6 text-left"><p>400 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Spa-процедура для рук.</p>
-                            <p class="red__text">Spa-уход включает: пиллинг, маску и крем для рук</p></div>
-                        <div class="col-md-1 col-sm-6  text-right"></div>
-                        <div class="col-md-1 col-sm-6  text-left"><p>90 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Педикюр гигиенический, женский. </p>
-                            <p class="red__text">Обрезной педикюр с ванночкой и полированием подошвы</p></div>
-                        <div class="col-md-1 col-sm-6  text-right"></div>
-                        <div class="col-md-1 col-sm-6  text-left"><p>170 грн</p></div>
-                    </div>
-
-                    <div class="row price">
-                        <div class="col-md-10 col-sm-12 manicure"><p>Педикюр гигиенический, мужской. </p>
-                            <p class="red__text">Обрезной педикюр с ванночкой и полированием подошвы</p></div>
-                        <div class="col-md-1 col-sm-6  text-right"></div>
-                        <div class="col-md-1 col-sm-6  text-left"><p>250 грн</p></div>
-                    </div>
+                    <?php if ( $services ): ?>
+                        <?php foreach( $services as $post ): setup_postdata($post); ?>
+                            <?php
+                            $service_price_from = get_field('service_price_from');
+                            $service_price = get_field('service_price');
+                            ?>
+                            <div class="row price">
+                                <div class="col-md-10 col-sm-12 manicure"><p><?php the_title(); ?></p>
+                                    <p class="red__text"><?php echo get_the_content(); ?></p></div>
+                                <div class="col-md-1 col-sm-6 text-right"><?php if ( $service_price_from ) echo 'от'; ?></div>
+                                <div class="col-md-1 col-sm-6 text-left"><p><?php echo $service_price; ?> грн</p></div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </form>
             </div>
         </div>
