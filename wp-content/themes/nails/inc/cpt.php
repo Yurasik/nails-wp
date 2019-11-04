@@ -47,8 +47,8 @@ function cpt_custom_init(){
             'parent_item_colon'  => '',
             'menu_name'          => 'Услуги'
         ),
-        'public'             => false,
-        //'publicly_queryable' => true,
+        'public'             => true,
+        'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,

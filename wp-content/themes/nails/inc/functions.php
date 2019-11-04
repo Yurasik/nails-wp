@@ -109,3 +109,19 @@ if( !function_exists('send_order_mail') ) {
         return $response;
     }
 }
+
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
+add_filter( 'wpcf7_services_field_post_data', 'custom_wpcf7_services_field_post_data', 10, 4);
+function custom_wpcf7_services_field_post_data( $field_post_data, $posts, $tag, $args ) {
+
+    if ( $tag->name === 'services' ) {
+        foreach ( $field_post_data['ids'] as $k => $id ) {
+            $price = get_field('service_price', $id);
+            $field_post_data['prices'][$k] = $price;
+        }
+    }
+
+    return $field_post_data;
+
+}
